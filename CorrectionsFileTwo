@@ -1,0 +1,26 @@
+/* this is a program that makes the necessary corrections
+ * CorrectionProblemTwo.cpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: whitney douglas-diaz
+ */
+#include<iostream>
+#include<conio.h>
+
+//Standard namespace declaration
+using namespace std;
+//Main Function
+int main()
+{
+double myMoney = 1000.50; //this should be printed out
+//Standard Ouput Statement
+//there should be arrows before and after the print statement
+cout<<"Please be sure to correct all syntax errors in this program."<<endl;
+//double quotes need to be in pairs
+cout<<"I have corrected all errors for this program." <<endl;
+//variable myMoney should be written after print statement and $ should be added
+cout<<"The total amount of money available is = $"<< myMoney <<endl;
+// Wait For Output Screen
+//Main Function return Statement
+return 0;
+}

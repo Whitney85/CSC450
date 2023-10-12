@@ -1,0 +1,21 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: whit_
+ */
+#include<iostream>
+#include<conio.h>
+
+//Standard namespace declaration
+using namespace std;
+
+//Main function;
+int main()
+{
+	//Standard output statement
+	cout<<"Welcome to this C++ program. "<<endl;
+	cout<<"I have corrected all errors for this program."<<endl;
+	//Wait for output screen
+	return 0;
+}

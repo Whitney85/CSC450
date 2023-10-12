@@ -1,0 +1,30 @@
+/* this is a program created to output the information for functional person
+ * includes first name, last name, street address, city, and zipcode
+ * main.cpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: whitney douglas-diaz
+ */
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+	//declare necessary variables for person's information
+	std::string FirstName = ("Charlotte");
+	std::string LastName = ("Windsor");
+	std::string StreetAddress = ("952 Buckingham Palace Lane");
+	std::string City = ("London");
+	std::string Zipcode = ("38214");
+
+	//print the person's information to the console
+	std::cout<<"First Name: " <<FirstName<<std::endl;
+	std::cout<<"Last Name: " <<LastName<<std::endl;
+	std::cout<<"Street Address: " <<StreetAddress<<std::endl;
+	std::cout<<"City: " <<City<<std::endl;
+	std::cout<<"Zipcode: " <<Zipcode<<std::endl;
+
+	return 0;
+}

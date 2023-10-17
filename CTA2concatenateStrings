@@ -1,0 +1,40 @@
+/* this is a program that will ask a user to input multiple strings
+ * and then concatenate them
+ * main.cpp
+ *
+ *  Created on: Oct 16, 2023
+ *      Author: whitney douglas-diaz
+ */
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Use a for loop to take input from the user three times
+    for (int i = 0; i < 3; i++) {
+        string firstString;
+        // Prompt the user to enter a string
+        cout << "Enter a string: ";
+
+        // Read the input string, including spaces
+        getline(cin, firstString);
+
+        // Second string
+        string secondString;
+
+        // Prompt the user to enter another string
+        cout << "Enter a second string: ";
+
+        // Read the input string, including spaces
+        getline(cin, secondString);
+
+        // Concatenate the strings
+        firstString = firstString + " " + secondString;
+        cout << "Concatenated string: " << firstString << endl;
+    }
+
+    return 0;
+}
+
+

@@ -1,0 +1,44 @@
+/* This is a program that will demonstrate using pointers in C++
+ * usingpointers.cpp
+ *
+ *  Created on: Oct 25, 2023
+ *      Author: whitney douglas-diaz
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int first;
+	cout << "Enter a number:" << endl; //asks user to give a number
+	cin >> first; //reads user's input
+	cout << "Address of this variable: " << &first << endl; //displays address of first
+
+	int second;
+	cout << "Enter a second number:" <<endl;
+	cin >> second; //reads user's input
+	cout << "Address of this variable: " << &second << endl; //displays address of second
+
+	int third;
+	cout << "Enter a third number:" <<endl;
+	cin >> third;
+	cout << "Address of this variable: " << &third << endl;
+
+	//use the "new" operator and create pointers for each variable
+	int* ptr1 = new int(first);
+	int* ptr2 = new int(second);
+	int* ptr3 = new int(third);
+
+	cout <<"The contents of each pointer:\n";
+	cout << "Pointer 1: " << ptr1 <<  " Pointer 2: " << ptr2 << " Pointer 3: " << ptr3 << endl;
+
+	//use the "delete" operator to free memory space
+	delete ptr1;
+	delete ptr2;
+	delete ptr3;
+	return 0;
+
+}
+
+
+

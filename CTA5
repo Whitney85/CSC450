@@ -1,0 +1,56 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+	string input;
+	ofstream outFile;
+	outFile.open("CSC450_CT5_mod5.txt", ios::app);
+	if (outFile.is_open()) {
+		cout << "Enter a string to be stored in the file: ";
+		getline(cin, input);
+		outFile << input << endl;
+		outFile.close();
+	}
+	else {
+		cout << "Error opening file" << endl;
+	}
+	ifstream inFile;
+	ofstream outFile2;
+	inFile.open("CSC450_CT5_mod5.txt");
+	outFile2.open("CSC450_mod5-2.txt");
+	if (inFile.is_open() && outFile2.is_open()) {
+		string line;
+		while (getline(inFile, line)) {
+			outFile2 << line << endl;
+		}
+		inFile.close();
+		outFile.close();
+	}
+	else {
+		cout << "Error opening file" << endl;
+	}
+
+	string reverse;
+	ifstream inFile2;
+	ofstream outFile3;
+	inFile2.open("CSC450_mod5-2.txt");
+	outFile3.open("CSC450_mod5-reverse.txt");
+	if (inFile2.is_open() && outFile3.is_open()) {
+		string line;
+		while (getline(inFile2, line)) {
+			reverse = string(line.rbegin(), line.rend());
+			outFile3 << reverse << endl;
+		}
+		inFile2.close();
+		outFile3.close();
+	}
+	else {
+		cout << "Error opening file" << endl;
+	}
+	return 0;
+}
+
+
+
+

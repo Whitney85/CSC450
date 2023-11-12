@@ -1,0 +1,44 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Nov 12, 2023
+ *      Author: whit_
+ */
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string input;
+    cout << "Enter your input: ";
+    getline(cin, input);
+
+    ofstream file;
+    file.open("CSC450_CT5_mod5.txt", ios_base::app);
+    file << input << endl;
+    file.close();
+
+    return 0;
+}
+
+string reverseString(string str) {
+    reverse(str.begin(), str.end());
+    return str;
+}
+
+void reverseFile() {
+    ifstream file("CSC450_CT5_mod5.txt");
+    ofstream reverseFile("CSC450-mod5-reverse.txt");
+    string line;
+
+    while (getline(file, line)) {
+        reverseFile << reverseString(line) << endl;
+    }
+
+    file.close();
+    reverseFile.close();
+
+}
+

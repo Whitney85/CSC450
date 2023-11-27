@@ -1,0 +1,39 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Nov 21, 2023
+ *      Author: whit_
+ */
+#include <iostream>
+#include <thread>
+#include <stdlib.h>
+using namespace std;
+
+int count = 0;
+void countDown() {
+	while(count > 0) {
+		count--;
+		cout << "Counting down: "<< count << endl;
+		}
+}
+void countUp() {
+	while(count < 20) {
+		count++;
+		cout<< "Counting up: " << count <<endl;
+	}
+}
+int main() {
+	std::thread myThread(countUp);
+	std::thread myThread2(countDown);
+	myThread.join();
+	myThread2.join();
+
+	return 0;
+}
+
+
+
+
+
+
+

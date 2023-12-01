@@ -1,0 +1,43 @@
+import java.lang;
+
+public class Counter extends Thread {
+	private int start;
+	private int end;
+	private boolean countingUp;
+	
+	public Counter(int start, int end, boolean countingUp) {
+		this.start = start;
+		this.end = end;
+		this.countingUp = countingUp;
+	}
+	
+	public void run() {
+		if (countingUp) {
+			for (int i = start; i <= end; i++) {
+				System.out.println(i);
+			}
+		}else {
+			for (int i = start; i >= end; i--) {
+				System.out.println(i);
+			}
+		}
+	}
+
+}
+public class Main {
+
+	public static void main(String[] args) {
+		Counter upThread = new Counter(1, 20, true);
+		Counter downThread = new Counter(20, 0, false);
+		
+		upThread.start();
+		try {
+			upThread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		downThread.start();
+
+	}
+
+}
